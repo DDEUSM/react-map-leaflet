@@ -66,7 +66,7 @@ export default function App(){
     <div>
       <Main>
         
-            <Form>
+            <Form onSubmit={((e) => {e.preventDefault()})}>
 
               <InputLocale 
                 type="text"

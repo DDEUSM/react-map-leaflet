@@ -1,6 +1,6 @@
 import styled from "styled-components"
-const shadow_color = `#cecebf`;
-const orange_color = `#E89B25`;
+const shadow_color = `rgba(128, 128, 128, 0.418)`;
+const orange_color = `orange`;
 const darkBlue = `#084A6A`;
 const transition_pattern = `ease-in-out .2s`;
 

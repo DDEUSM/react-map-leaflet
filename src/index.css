@@ -3,13 +3,13 @@
 body {
     
     margin: 0;
-    box-sizing: border-box;     
+    box-sizing: border-box;       
 } 
 
 *{ 
     font-family: Poppins, Arial;
     scrollbar-width: thin;         
-    scrollbar-color: #E89B25 rgb(231, 231, 231);     
+    scrollbar-color: orange rgb(231, 231, 231);     
 }
 *::-webkit-scrollbar {
     width: 5px;
@@ -20,7 +20,7 @@ body {
   }
   
   *::-webkit-scrollbar-thumb {
-    background-color:#E89B25;
+    background-color:orange;
     border-radius: 20px;    
   }
 
