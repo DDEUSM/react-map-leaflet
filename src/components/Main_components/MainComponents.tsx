@@ -30,6 +30,7 @@ export const MapRightSection = styled.section`
 
 export const Form = styled.form`
     position : absolute;
+    left : 4px;
     display : flex;
     align-items : center;
     justify-content : center;
@@ -39,11 +40,10 @@ export const Form = styled.form`
     border-radius: 15px;
     box-shadow: 0px 3px 5px 1px ${shadow_color};
     padding : 4px;   
-    z-index : 2; 
-    margin-left : 4px;
+    z-index : 2;     
     @media (max-width : 600px){
-        width : 96%; 
-        margin-left : 0;       
+        width : 96%;       
+        left : auto;   
     }
 `;
 
@@ -104,7 +104,7 @@ interface ResultContainerProps {
 
 export const ResultContainer = styled.div<ResultContainerProps>`
     position : absolute;    
-    top : 58px;
+    top : 58px;    
     display : flex;
     flex-direction : column;  
     align-items : center;
@@ -116,14 +116,16 @@ export const ResultContainer = styled.div<ResultContainerProps>`
     background-color : white;   
     transition : all ease-in .4s;
     margin-left : ${({ visible } : ResultContainerProps) => {
-        return (visible?(`4px`):(`-590px`))
+        return (visible?(`4px`):(`-1200px`))
     }};
     margin-top : 85px;  
     z-index : 2;
 
     @media (max-width : 600px){
-        width : 96%;   
-        margin-left : 0;      ;        
+        width : 96%;           
+        margin-left : ${({ visible } : ResultContainerProps) => {
+            return (visible?(`0`):(`-1200px`))
+        }}; 
     }
     
 `;
