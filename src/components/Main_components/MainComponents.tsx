@@ -14,7 +14,7 @@ export const Main = styled.main`
     position : relative;
     display : flex;    
     background-color : white;
-    height : 100svh;
+    height : 90svh;
     width : 100%;
 
     @media (max-width : 600px){
