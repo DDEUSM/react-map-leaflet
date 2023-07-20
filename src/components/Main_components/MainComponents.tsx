@@ -14,7 +14,7 @@ export const Main = styled.main`
     position : relative;
     display : flex;    
     background-color : white;
-    height : 100vh;
+    height : 100svh;
     width : 100%;
 
     @media (max-width : 600px){
@@ -141,7 +141,7 @@ export const ResultContainer = styled.div<ResultContainerProps>`
     background-color : white;   
     transition : all ease-in .4s;
     margin-left : ${({ visible } : ResultContainerProps) => {
-        return visible?(`4px`):(`-590px`)
+        return (visible?(`4px`):(`-590px`))
     }};
     margin-top : 85px;  
     z-index : 2;
