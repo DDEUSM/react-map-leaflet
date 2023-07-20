@@ -1,4 +1,4 @@
-import styled,{ createGlobalStyle} from "styled-components"
+import styled from "styled-components"
 const shadow_color = `#cecebf`;
 const orange_color = `#E89B25`;
 const darkBlue = `#084A6A`;
