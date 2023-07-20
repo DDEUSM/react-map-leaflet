@@ -65,8 +65,7 @@ export default function App(){
   return (
     <div>
       <Main>
-        <LocaleLeftSection>
-          <SearchContainer>
+        
             <Form>
 
               <InputLocale 
@@ -131,8 +130,7 @@ export default function App(){
               </ResultList>
               <BlurLimit />
             </ResultContainer>
-          </SearchContainer>
-        </LocaleLeftSection>
+        
         <MapRightSection>
           <Map lat={selected_address?.lat} lon={selected_address?.lon}/>
         </MapRightSection>

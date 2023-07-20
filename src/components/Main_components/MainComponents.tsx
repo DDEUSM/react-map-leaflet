@@ -11,6 +11,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Main = styled.main`
+    position : relative;
     display : flex;    
     background-color : white;
     height : 100vh;
@@ -53,14 +54,22 @@ export const SearchContainer = styled.div`
 `;
 
 export const Form = styled.form`
+    position : absolute;
     display : flex;
     align-items : center;
     justify-content : center;
-    max-width : calc(100% - 8px);    
+    width : 580px;  
+    margin-top : 85px;  
     background-color: white;    
     border-radius: 15px;
     box-shadow: 0px 3px 5px 1px ${shadow_color};
-    padding : 4px;    
+    padding : 4px;   
+    z-index : 2; 
+    margin-left : 4px;
+    @media (max-width : 600px){
+        width : 96%; 
+        margin-left : 0;       
+    }
 `;
 
 export const InputLocale = styled.input`
@@ -119,19 +128,28 @@ interface ResultContainerProps {
 }
 
 export const ResultContainer = styled.div<ResultContainerProps>`
-position : relative;
+    position : absolute;    
+    top : 58px;
     display : flex;
     flex-direction : column;  
     align-items : center;
     justify-content : center;
-    height : 89%;
-    width : 100%;    
+    height : 485px;
+    width : 580px;  
+    padding :0px 4px;
     border-radius: 15px; 
     background-color : white;   
     transition : all ease-in .4s;
     margin-left : ${({ visible } : ResultContainerProps) => {
-        return visible?(`0px`):(`-590px`)
+        return visible?(`4px`):(`-590px`)
     }};
+    margin-top : 85px;  
+    z-index : 2;
+
+    @media (max-width : 600px){
+        width : 96%;   
+        margin-left : 0;      ;        
+    }
     
 `;
 
@@ -144,13 +162,12 @@ export const SubTitle = styled.h3`
     
 `;
 
-export const ResultList = styled.ul`
-    position : relative;
+export const ResultList = styled.ul`    
     display : flex;
     flex-direction : column;
     align-items : center;
     
-    height : 89%;
+    height : 100%;
     width : 100%;
     margin : 0px;
     padding : 0px;
