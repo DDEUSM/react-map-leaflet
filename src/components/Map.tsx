@@ -16,7 +16,7 @@ function NewMapView(props : LatLngExpression){
     useEffect(() => {
         if(props){
             map.setView(props),
-            map.setZoom(16),
+            map.setZoom(14),
             {
                 animate : true
             }
