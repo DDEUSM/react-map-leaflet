@@ -6,7 +6,7 @@ import { debounce } from "lodash";
 
 import { AddresDetailsType } from "./types/Api_types";
 
-import { Main, MapRightSection, LocaleLeftSection, InputLocale, Form, ResultContainer, SubTitle, LocaleContainer, ResultList, SearchContainer, DeleteText, BlurLimit } from "./components/Main_components/MainComponents";
+import { Main, MapRightSection, InputLocale, Form, ResultContainer, SubTitle, LocaleContainer, ResultList, DeleteText, BlurLimit } from "./components/Main_components/MainComponents";
 
 import PreLoader from "./components/PreLoader";
 

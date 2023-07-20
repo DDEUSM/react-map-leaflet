@@ -14,7 +14,7 @@ export const Main = styled.main`
     position : relative;
     display : flex;    
     background-color : white;
-    height : 90svh;
+    height : 100svh;
     width : 100%;
 
     @media (max-width : 600px){
@@ -26,31 +26,6 @@ export const MapRightSection = styled.section`
     height : 100%;
     width : 100%;
     z-index : 1;    
-`;
-
-export const LocaleLeftSection = styled.section`
-    position : absolute;    
-    display: flex;
-    flex-direction: column;             
-    height: 100%;
-    width : 580px;       
-    z-index : 2;
-    margin-left: 5px;
-
-    @media (max-width : 600px){
-        width : 99%;
-        margin : 0px;
-    }
-`;
-
-export const SearchContainer = styled.div`    
-    display: flex;
-    flex-direction: column;    
-    height : 540px;
-    gap : 4px;
-    width: 100%;            
-    margin-top : 85px;    
-    border-radius : 20px;
 `;
 
 export const Form = styled.form`
