@@ -71,7 +71,8 @@ export default function App(){
               <InputLocale 
                 type="text"
                 placeholder="Digite um endereço"
-                onFocus={() => openModal(true)}                                         
+                onFocus={() => openModal(true)} 
+                onBlur={() => openModal(false)}                                        
                 onChange={(e) => {
                   setStatusTyping(true);
                   setAddress(e.target.value)
