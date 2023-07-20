@@ -120,6 +120,7 @@ export const ResultContainer = styled.div<ResultContainerProps>`
     }};
     margin-top : 85px;  
     z-index : 2;
+    box-shadow: 0px 3px 5px 1px ${shadow_color};
 
     @media (max-width : 600px){
         width : 96%;           
@@ -181,7 +182,7 @@ export const LocaleContainer = styled.li`
     } 
 
     @media (max-width : 510px){
-        font-size : 13.5px;           ;
+        font-size : 12px;
         height : 95px;
     }
 `;
