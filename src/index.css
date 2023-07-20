@@ -12,7 +12,7 @@ body {
     scrollbar-color: #E89B25 rgb(231, 231, 231);     
 }
 *::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   
   *::-webkit-scrollbar-track {
@@ -24,4 +24,9 @@ body {
     border-radius: 20px;    
   }
 
- 
+ @media (max-width : 600px){
+
+    *::-webkit-scrollbar {
+      width: 5px;
+    }
+ }
