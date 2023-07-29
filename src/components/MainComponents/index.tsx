@@ -143,9 +143,9 @@ export const ResultList = styled.ul`
     display : flex;
     flex-direction : column;          
     height : 500px;
-    width : calc(100% - 2px);
+    width : 100%;
     margin : 0px;
-    padding : 1px;
+    padding : 0;
     style : none;
     transition : ${transition_pattern};
     overflow-y: auto;    
