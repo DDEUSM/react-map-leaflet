@@ -200,8 +200,7 @@ export const BlurLimit = styled.div`
 `;
 
 export const AddressInfoBox = styled.div`
-    height : 80px;
-    width : ;
+    height : 80px;    
 `;
 
 type BoxProps = {
@@ -233,7 +232,7 @@ export const SelectedAddresBox = styled.div<BoxProps>`
     @media (max-width : 600px) {
         bottom : 4px;
         margin-bottom : ${({ visible } : BoxProps) => {
-            return (visible?(`0px`):(`-95px`))
+            return (visible?(`0px`):(`-100px`))
         }}; 
         margin-left : 0px;
         font-size : 12px;
