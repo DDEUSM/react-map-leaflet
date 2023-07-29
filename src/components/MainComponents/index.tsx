@@ -143,9 +143,9 @@ export const ResultList = styled.ul`
     display : flex;
     flex-direction : column;          
     height : 500px;
-    width : 100%;
+    width : calc(100% - 2px);
     margin : 0px;
-    padding : 0;
+    padding : 1px;
     style : none;
     transition : ${transition_pattern};
     overflow-y: auto;    
@@ -233,7 +233,7 @@ export const SelectedAddresBox = styled.div<BoxProps>`
     @media (max-width : 600px) {
         bottom : 4px;
         margin-bottom : ${({ visible } : BoxProps) => {
-            return (visible?(`0px`):(`-99px`))
+            return (visible?(`0px`):(`-95px`))
         }}; 
         margin-left : 0px;
         font-size : 12px;
