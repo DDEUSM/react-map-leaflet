@@ -1,4 +1,4 @@
-import "../../App.css";
+import '../../App.css';
 import { useState, useRef, useEffect } from 'react';
 
 export default function PreLoader(){
@@ -18,15 +18,18 @@ export default function PreLoader(){
     },[]);
 
     return (
-        <>            
+        <div className='loading'>            
             {is_loading?(
-                <svg className="svgCircle">
-                    <circle cx="40" cy="40" r="40">                
+            <>
+                <svg className='loading__icon'>
+                    <circle cx='40' cy='40' r='40'>                
                     </circle>            
                 </svg>
-            ):(
-                <p>Nenhum Endereço foi Encontrado.</p>
+                <p className='loading__message'>Procurando</p>
+            </>
+            ):(                                
+                <p className='loading__message__notfound'>Nenhum Endereço foi Encontrado.</p>
             )}
-        </>
+        </div>
     )
 }

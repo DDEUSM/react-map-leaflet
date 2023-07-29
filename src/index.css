@@ -9,7 +9,8 @@ body {
 *{ 
     font-family: Poppins, Arial;
     scrollbar-width: thin;         
-    scrollbar-color: orange rgb(231, 231, 231);     
+    scrollbar-color: orange rgb(231, 231, 231);    
+    scrollbar-arrow-color: black; 
 }
 *::-webkit-scrollbar {
     width: 5px;
@@ -27,6 +28,6 @@ body {
  @media (max-width : 600px){
 
     *::-webkit-scrollbar {
-      width: 5px;
+      width: 5px;      
     }
  }

@@ -1,17 +1,17 @@
 
-import Map from "./components/Map"
-import MarkerIcon from "../public/icon/marker.png";
-import { useState, useRef, useEffect} from "react";
-import { debounce } from "lodash";
+import Map from './components/Map';
+import MarkerIcon from './assets/marker.png';
+import { useState, useRef, useEffect} from 'react';
+import { debounce } from 'lodash';
 
 import { AddresDetailsType } from "./types/Api_types";
 
-import { Main, MapRightSection, InputLocale, Form, ResultContainer, SubTitle, LocaleContainer, ResultList, DeleteText, BlurLimit } from "./components/Main_components/MainComponents";
+import { Main, MapRightSection, InputLocale, Form, ResultContainer, SubTitle, LocaleContainer, ResultList, DeleteText, BlurLimit, SelectedAddresBox } from "./components/MainComponents";
 
-import PreLoader from "./components/PreLoader";
+import PreLoader from './components/PreLoader';
 
 
-const NOMINATIM_URL = "https://nominatim.openstreetmap.org/search?";
+const NOMINATIM_URL = 'https://nominatim.openstreetmap.org/search?';
 
 export default function App(){
 
@@ -51,8 +51,7 @@ export default function App(){
     debounceRef.current = debounce((e) => {       
       if(e.target.value.length > 0){
         searchAddress( e.target.value );   
-        console.log(e.target.value);
-        
+        console.log(e.target.value); 
       }        
     }, 400);
     return debounceRef.current;  
@@ -107,6 +106,7 @@ export default function App(){
               <SubTitle>
                 Resultados da Pesquisa
               </SubTitle>
+              
               <ResultList>              
               {address_data?.length?(
                 address_data.map((address) => {
@@ -126,15 +126,20 @@ export default function App(){
                     <></>
                   )                                      
                 )                
-              }      
-              
-              </ResultList>
+              }                    
+              </ResultList>                         
               <BlurLimit />
             </ResultContainer>
-        
+               
         <MapRightSection>
           <Map lat={selected_address?.lat} lon={selected_address?.lon}/>
         </MapRightSection>
+        
+        <SelectedAddresBox visible={isOpen?(false):(true)}>
+          <img src={MarkerIcon} height={30} width={30} alt="icon Marker"/>
+          { selected_address?(selected_address.display_name):('Sem localização atual') }
+        </SelectedAddresBox>
+        
       </Main>
     </div>
   )

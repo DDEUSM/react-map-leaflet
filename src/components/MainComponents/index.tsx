@@ -1,12 +1,11 @@
-import styled from "styled-components"
+import styled from "styled-components";
+
 const shadow_color = `rgba(128, 128, 128, 0.418)`;
 const orange_color = `orange`;
 const darkBlue = `#084A6A`;
 const transition_pattern = `ease-in-out .2s`;
 
-
-export const Paragraph = styled.p`
-    
+export const Paragraph = styled.p`    
     color : ${darkBlue};
 `;
 
@@ -16,7 +15,7 @@ export const Main = styled.main`
     background-color : white;
     height : 100svh;
     width : 100%;
-
+    overflow-y: hidden;
     @media (max-width : 600px){
         justify-content : center;
     }
@@ -37,7 +36,7 @@ export const Form = styled.form`
     width : 580px;  
     margin-top : 85px;  
     background-color: white;    
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 0px 3px 5px 1px ${shadow_color};
     padding : 4px;   
     z-index : 2;     
@@ -111,8 +110,8 @@ export const ResultContainer = styled.div<ResultContainerProps>`
     justify-content : center;
     height : 485px;
     width : 580px;  
-    padding :0px 4px;
-    border-radius: 15px; 
+    padding :1px 4px;
+    border-radius: 10px; 
     background-color : white;   
     transition : all ease-in .4s;
     margin-left : ${({ visible } : ResultContainerProps) => {
@@ -142,19 +141,17 @@ export const SubTitle = styled.h3`
 
 export const ResultList = styled.ul`    
     display : flex;
-    flex-direction : column;
-    align-items : center;
-    
-    height : 100%;
+    flex-direction : column;          
+    height : 500px;
     width : 100%;
     margin : 0px;
-    padding : 0px;
+    padding : 0;
     style : none;
     transition : ${transition_pattern};
-    overflow: auto;    
+    overflow-y: auto;    
     background-color : white;    
-    border-bottom-left-radius : 15px;
-    border-bottom-right-radius : 15px;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 8px;
 `;
 
 
@@ -178,12 +175,17 @@ export const LocaleContainer = styled.li`
     &:hover {        
         border-left : 4px solid ${orange_color};         
         border-bottom : 1px solid ${orange_color};
-        color : ${darkBlue};      
+        color : ${darkBlue};            
     } 
 
     @media (max-width : 510px){
         font-size : 12px;
         height : 95px;
+        &:hover {
+            border-left : 4px solid transparent;         
+            border-bottom : 1px solid #c4c4c4;
+            color : ${darkBlue};   
+        }             
     }
 `;
 
@@ -195,4 +197,48 @@ export const BlurLimit = styled.div`
     height : 10px;
     width : 95%;    
     border-radius : 18px;
+`;
+
+export const AddressInfoBox = styled.div`
+    height : 80px;
+    width : ;
+`;
+
+type BoxProps = {
+    visible : boolean;
+}
+
+export const SelectedAddresBox = styled.div<BoxProps>`    
+    display : flex;
+    text-align : left;
+    gap : 4px;
+    justify-content : flex-start;
+    align-items : center;
+    position : absolute;
+    bottom : 75%;
+    height : 95px;
+    width : 580px;  
+    padding: 0px 4px;  
+    color: white;
+    background-color : #00B2FF;  
+    border-radius : 10px;  
+    font-size : 14px;
+    line-height: 140%; 
+    transition : ${transition_pattern};
+    margin-left : ${({ visible } : ResultContainerProps) => {
+        return (visible?(`4px`):(`-1200px`))
+    }};
+    z-index: 2;
+
+    @media (max-width : 600px) {
+        bottom : 4px;
+        margin-bottom : ${({ visible } : BoxProps) => {
+            return (visible?(`0px`):(`-95px`))
+        }}; 
+        margin-left : 0px;
+        font-size : 12px;
+        width : calc(100% - 16px);  
+
+    }
+   
 `;
