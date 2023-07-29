@@ -5,7 +5,7 @@ import L, { LatLngExpression } from 'leaflet';
 import { MapProps } from '../types/Api_types';
 
 const icon = L.icon({
-    iconUrl : "../assets/marker.png",
+    iconUrl : "marker.png",
     iconSize : [38, 38]
 })
 
