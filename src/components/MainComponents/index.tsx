@@ -229,15 +229,17 @@ export const SelectedAddresBox = styled.div<BoxProps>`
     }};
     z-index: 2;
 
-    @media (max-width : 600px) {
-        bottom : 4px;
+    @media (max-width: 600px) {
+        top: calc(100% - 95px - 2px);
         margin-bottom : ${({ visible } : BoxProps) => {
             return (visible?(`0px`):(`-100px`))
         }}; 
-        margin-left : 0px;
-        font-size : 12px;
-        width : calc(100% - 16px);  
-
+        transform: ${({ visible } : BoxProps) => {
+            return (visible?(`translate(0px, 0px)`):(`translate(0px, 100px)`))
+        }}; 
+        margin-left: 0px;
+        font-size: 12px;
+        width: calc(100% - 16px);  
     }
    
 `;
