@@ -29,12 +29,12 @@ export const MapRightSection = styled.section`
 
 export const Form = styled.form`
     position : absolute;
+    top: 90px;
     left : 4px;
     display : flex;
     align-items : center;
     justify-content : center;
     width : 580px;  
-    margin-top : 85px;  
     background-color: white;    
     border-radius: 10px;
     box-shadow: 0px 3px 5px 1px ${shadow_color};
@@ -207,14 +207,14 @@ type BoxProps = {
     visible : boolean;
 }
 
-export const SelectedAddresBox = styled.div<BoxProps>`    
+export const SelectedAddresBox = styled.div<BoxProps>`
+    position : absolute;
+    top : 150px;    
     display : flex;
     text-align : left;
     gap : 4px;
     justify-content : flex-start;
     align-items : center;
-    position : absolute;
-    bottom : 75%;
     height : 95px;
     width : 580px;  
     padding: 0px 4px;  

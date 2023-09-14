@@ -64,7 +64,7 @@ export default function App(){
   return (
     <div>
       <Main>
-        
+          
             <Form onSubmit={((e) => {e.preventDefault()})}>
 
               <InputLocale 
@@ -100,7 +100,8 @@ export default function App(){
                 <>
                 </>
               )
-              }                          
+              }
+                                      
             </Form>
             <ResultContainer visible={isOpen}>
               <SubTitle>
